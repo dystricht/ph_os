@@ -2,7 +2,7 @@
   "name": "ph_os",
   "version": "1.0.0",
   "description": "ph_os website skeleton",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/dystricht/ph_os/issues"
   },
-  "homepage": "https://github.com/dystricht/ph_os#readme"
+  "homepage": "https://github.com/dystricht/ph_os#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
