@@ -11,7 +11,7 @@ function setup() {
   canvas.position(0,0);
   canvas.style('z-index', '-1');
 
-  ghostie = new Object(0, 0, 'assets/ghostie.png');
+  ghostie = new Object(width/2, height/2, 'assets/ghostie.png');
   dx = -0.03;
 
 }
@@ -19,26 +19,14 @@ function setup() {
 function draw() {
   background('#e6ded1');
 
-
-  push();
-  translate(width/2, height/2);
-
-  //rotate(PI/3.0);
-  rotate(PI*dx);
-
-  scale(0.25);
-
-
-  ghostie.meander();
+  //ghostie.applyForce(0.05, 0.05);
+  ghostie.assess();
+  ghostie.behaviors();
+  ghostie.update();
   ghostie.display();
   pop();
 
-
-
-  //ellipse(0, 0, 200, 200);
-
   dx+=0.001;
-
 
 }
 
